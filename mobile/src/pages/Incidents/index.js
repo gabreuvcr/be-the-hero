@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
+import { View, FlatList, Image, Text, TouchableOpacity, StatusBar } from 'react-native';
 
 import api from '../../services/api';
 
@@ -48,6 +48,7 @@ export default function Incidents() {
 
   return(
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content"/>
       <View style={styles.header}>
         <Image source={logoImg} />
         <Text style={styles.headerText}>
